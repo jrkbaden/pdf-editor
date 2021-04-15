@@ -110,7 +110,7 @@
       addTextField();
     }
   }
-  function addTextField(text = "New Text Field") {
+  function addTextField(text = "Neues Textfeld") {
     const id = genID();
     fetchFont(currentFont);
     const object = {
@@ -216,7 +216,7 @@
       class="whitespace-no-wrap bg-blue-500 hover:bg-blue-700 text-white
       font-bold py-1 px-3 md:px-4 rounded mr-3 cursor-pointer md:mr-4"
       for="pdf">
-      Choose PDF
+      PDF-Datei wählen
     </label>
     <div
       class="relative mr-3 flex h-8 bg-gray-400 rounded-sm overflow-hidden
@@ -261,12 +261,12 @@
       md:px-4 mr-3 md:mr-4 rounded"
       class:cursor-not-allowed={pages.length === 0 || saving || !pdfFile}
       class:bg-blue-700={pages.length === 0 || saving || !pdfFile}>
-      {saving ? 'Saving' : 'Save'}
+      {saving ? 'Saving' : 'Speichern'}
     </button>
-    <a href="https://github.com/ShizukuIchi/pdf-editor">
+    <a href="https://drk-baden.de">
       <img
-        src="/GitHub-Mark-32px.png"
-        alt="A GitHub icon leads to personal GitHub page" />
+        src="/drk-kompaktlogo.svg"
+        alt="DRK-Logo, das zu" />
     </a>
   </div>
   {#if addingDrawing}
@@ -292,7 +292,7 @@
     <div class="flex justify-center px-5 w-full md:hidden">
       <img src="/edit.svg" class="mr-2" alt="a pen, edit pdf name" />
       <input
-        placeholder="Rename your PDF here"
+        placeholder="PDF-Datei hier umbenennen"
         type="text"
         class="flex-grow bg-transparent"
         bind:value={pdfName} />
@@ -357,7 +357,7 @@
     </div>
   {:else}
     <div class="w-full flex-grow flex justify-center items-center">
-      <span class=" font-bold text-3xl text-gray-500">Drag something here</span>
+      <span class=" font-bold text-3xl text-gray-500">Hier hin ziehen zum Hochladen</span>
     </div>
   {/if}
 </main>

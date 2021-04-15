@@ -250,7 +250,7 @@
     <div class="justify-center mr-3 md:mr-4 w-full max-w-xs hidden md:flex">
       <img src="/edit.svg" class="mr-2" alt="a pen, edit pdf name" />
       <input
-        placeholder="Rename your PDF here"
+        placeholder="PDF-Datei hier umbenennen?"
         type="text"
         class="flex-grow bg-transparent"
         bind:value={pdfName} />
@@ -260,13 +260,13 @@
       class="w-20 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3
       md:px-4 mr-3 md:mr-4 rounded"
       class:cursor-not-allowed={pages.length === 0 || saving || !pdfFile}
-      class:bg-blue-700={pages.length === 0 || saving || !pdfFile}>
+      class:bg-blue-700={pages.length === 0 || saving || !pdfFile} style="width: 7rem;">
       {saving ? 'Saving' : 'Speichern'}
     </button>
-    <a href="https://drk-baden.de">
+    <a href="https://drk-baden.de" >
       <img
         src="/drk-kompaktlogo.svg"
-        alt="DRK-Logo, das zu" />
+        alt="DRK-Logo, das zu" style="background: white; height: 2rem;" />
     </a>
   </div>
   {#if addingDrawing}
